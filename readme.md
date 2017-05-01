@@ -16,7 +16,7 @@ sw3Kernel:
 Kernels for the Sony SW3. Only works with version LCA43 (go to settings->about->build number to find your build number)
 If you have another OS version, you can manually install LCA43 on your watch, see here:
 https://forum.xda-developers.com/smartwatch-3/orig-development/rom-sony-smartwatch-3-rom-t3367728
-This folder also includes a 1) touchimage kernel (that reports debug info) and standard kernel (that reports regular touch events). 
+This folder also includes a 1) touchimage kernel (that reports debug info) and 2) a standard kernel (that reports regular touch events). 
 It also includes scripts to load kernels and a set of useful adb commands to use when the touchscreen is deactivated. 
 
 touchImageMoments:
