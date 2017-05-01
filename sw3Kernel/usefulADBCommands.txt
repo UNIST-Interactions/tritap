@@ -1,0 +1,48 @@
+# if you want to see running processes:
+adb shell ps
+
+# if you want to see install packages:
+adb shell pm list packages -3
+# a processing app will look like: "package:processing.test.touchImageWatch"
+# the rest of these examples use this app name in the commands as a sample
+
+# if you want to uninstall an app:
+adb uninstall processing.test.touchImageWatch
+
+# if you want to start an app
+adb shell monkey -p processing.test.touchImageWatch -c android.intent.category.LAUNCHER 1
+
+# or try this alternative:
+adb shell am start -a android.intent.action.VIEW -n processing.test.touchImageWatch/.MainActivity
+
+# sends a parameter called “param” with the value “value”
+adb shell am start -a android.intent.action.VIEW -n processing.test.touchImageWatch/.MainActivity -e param value
+
+# The “ip” parameter name is implemented and lets you send your ip
+adb shell am start -a android.intent.action.VIEW -n processing.test.touchImageWatch/.MainActivity -e ip 10.16.27.4
+
+# if you want to stop an app/process
+adb shell am force-stop processing.test.touchImageWatch
+
+# the fitness app crashes! Stop it via add to dismiss the dialogue box:
+adb shell am force-stop com.google.android.apps.fitness
+
+# if you want to simulate a tap - this is for pixel 0,0
+adb shell input touchscreen tap 0 0
+
+# if you want to get the battery level
+adb shell cat /sys/class/power_supply/battery/capacity
+
+# if you want to see watch ipaddresses:
+adb shell netstat -i
+
+# if you want to see one raw touch screen image on the terminal
+adb shell cat /proc/touch_img_reporting && echo
+
+# if you want to see touch screen kernel logs
+# After kernel boot these will include msgs about the touch screen image, but these time out after a while…
+adb shell dmesg | grep -i touch
+
+### NOT ADB, but get your ipaddress on OSX:
+ipconfig getifaddr en0
+
