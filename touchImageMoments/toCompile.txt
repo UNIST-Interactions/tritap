@@ -1,0 +1,11 @@
+# set java version to 7
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# compile
+javac -d ./ ./kr/ac/unist/interactions/touchimagemoments/*.java -cp /Applications/Processing3-0-1.app/Contents/Java/core.jar
+
+# jar
+jar -cf TouchImageMoments.jar ./kr/
+
+# copy into lib folder
+cp TouchImageMoments.jar ~/Documents/Processing/libraries/TouchImageMoments/library/
