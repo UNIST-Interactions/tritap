@@ -3,7 +3,7 @@ TriTap
 This project contains modified android kernel source code for the Sony SmartWatch3:
 https://en.wikipedia.org/wiki/Sony_SmartWatch 
 
-The modifications alter the touchscreen driver so that it logs the raw capacitive image to a proc file that is accessible to regular apps running on the phone. 
+The modifications alter the touchscreen driver so that it logs the raw capacitive image to a proc file that is accessible to regular apps running on the phone. An earlier version of these modifications was tested on  Nexus 5 smartphone running CyangenoMod. As cyangenomod is no longer avaiable, we opted not to release code for this platform - its basically the same as the SW3 code. 
 
 This project includes:
 
